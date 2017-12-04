@@ -1,0 +1,12 @@
+On evBefore
+	Calculate iUnsaved as kTrue
+	
+On evAfter
+	;  save the memo automatically
+	Do $cinst.$updateMemo() Returns lStatus
+	Do iSQLObjRef.$updateMemoDesc(iMemoID,iMemoText) Returns lStatus
+	If lStatus
+		Do $cwind.$updateMemoDesc(iMemoID,iMemoText)
+	End If
+	
+	Calculate iUnsaved as kFalse

@@ -1,0 +1,15 @@
+If (iStackLeftPos+iStackInterval)>(iScreenWidth-iStackInterval)
+	Calculate lResetStackVert as kTrue
+End If
+
+If (iStackTopPos+iStackInterval)>(iScreenHeight-iStackInterval)
+	Calculate lResetStackHorz as kTrue
+End If
+
+If lResetStackHorz
+	Calculate iStackTopPos as 50
+	Calculate iStackLeftPos as 30
+End If
+If lResetStackVert
+	Calculate iStackLeftPos as 30
+End If

@@ -1,0 +1,11 @@
+Calculate iNewMemo as kTrue
+Calculate iMemoTitle as
+Calculate iMemoDesc as
+
+Do iMemoRow.$clear()
+Calculate iMemoRow.MemoID as iMemoList.$cols.MemoID.$maximum()+1
+Calculate iMemoRow.MemoDate as #D
+Calculate iMemoRow.MemoTitle as "New Memo"
+Calculate iMemoRow.MemoDesc as ''
+
+Do iSQLObjRef.$addMemo(iMemoRow,lErrStr) Returns lStatus

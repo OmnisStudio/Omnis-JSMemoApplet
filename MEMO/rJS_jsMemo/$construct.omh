@@ -1,0 +1,12 @@
+Do $itasks.[$clib().$name].$getSess Returns iSQLObjRef
+
+Calculate iMemoText as pText
+Calculate iMemoID as pID
+
+Calculate iNewMemo as pNewMemo
+If not(iNewMemo)
+	Calculate iMemoTitle as pTitle
+	Do $cinst.$objs.pagePane.$currentpage.$assign(2)
+Else
+	Do $cinst.$setcurfield($cinst.$objs.pagePane.$objs.memoTitle)
+End If

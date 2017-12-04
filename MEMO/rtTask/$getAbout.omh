@@ -1,0 +1,18 @@
+Begin text block
+Text: {Memo is an Omnis applet developed using the Javascript controls.} (Carriage return)
+Text: (Carriage return)
+Text: {Function:} (Carriage return)
+Text: {The applet allows you to create quick post-it like memos using sub-form sets (SFS)} (Carriage return)
+Text: (Carriage return)
+Text: {Usage:} (Carriage return)
+Text: {Select the New Memo button to begin data entry.  The Memo Browser tab displays a summary of all the memos saved} (Carriage return)
+Text: {You can select a memo and either double-click to edit the data or press the Open All button to open all the memos.}
+Text: (Carriage return,Platform newline)
+Text: {Components:} (Carriage return)
+Text: {The memo data is stored in a SQLite table called Memo.  The schema class sMemo is an Omnis representation of the table definition.} (Carriage return)
+Text: {The applet uses custom methods in the oSQL object class.} (Carriage return)
+Text: (Carriage return)
+Text: {Extending:} (Carriage return)
+Text: {The applet could be extended by allowing you to delete memos that are no longer relevant or you could add a filter to show memos in a date range.} (Carriage return)
+Get text block lAboutText
+Quit method lAboutText

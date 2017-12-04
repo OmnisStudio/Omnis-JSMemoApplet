@@ -1,0 +1,23 @@
+{
+	"classtype": "kRemoteMenu",
+	"internalversion": 3,
+	"nextident": 1002,
+	"properties": {
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-02-01 16:29:42",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"enabled": true,
+		"external": false,
+		"moddate": "2012-10-02 12:43:43",
+		"showascheckedout": false,
+		"title": {
+			"type": 0,
+			"calc": "Menu"
+		},
+		"userinfo": "",
+		"version": "1"
+	}
+}

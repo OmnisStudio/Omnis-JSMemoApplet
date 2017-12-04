@@ -1,0 +1,7 @@
+;  opens all the sfs
+Calculate lTotal as iMemoList.$linecount
+For lNum from 1 to lTotal step 1
+	Do method addSFS (lNum)
+End For
+
+Calculate iSFSOpen as kTrue

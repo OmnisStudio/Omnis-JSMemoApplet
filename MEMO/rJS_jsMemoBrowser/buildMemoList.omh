@@ -1,0 +1,8 @@
+Do iMemoList.$definefromsqlclass('sMemo')
+Do iMemoList.$sessionobject.$assign(iSQLObjRef) Returns #F
+
+Do iSQLObjRef.$getMemos(iMemoList,lError) Returns lStatus
+
+Do iMemoList.$cols.$add(iMemoOpen)
+Do iMemoList.$sendall($ref.$assigncols(,,,,kFalse))
+Do iMemoList.$line.$assign(0)     ;; st/be/1003 -  do not set initial line

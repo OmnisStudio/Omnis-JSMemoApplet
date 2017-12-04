@@ -1,0 +1,6 @@
+On evClick
+	Do method destroySFS
+	Do method createSFS
+	Do method resetMemoListStatus
+	Calculate iSFSOpen as kFalse
+	Do $cinst.$objs.closeAllBtn.$enabled.$assign(kFalse)

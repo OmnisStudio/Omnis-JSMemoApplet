@@ -1,0 +1,9 @@
+Do $cinst.$objs.pagePane.$objs.memoList.$hideselection.$assign(not(pEnable))
+Do $cinst.$objs.pagePane.$objs.memoList.$enabled.$assign(pEnable)
+
+Do $cinst.$objs.aboutBtn.$enabled.$assign(pEnable)
+
+Do $cinst.$objs.pagePane.$objs.memoList.$enabled.$assign(pEnable)
+Do $cinst.$objs.tabStrip.$enabled.$assign(pEnable)
+
+Do $cinst.$objs.newMemoBtn.$enabled.$assign(pEnable)

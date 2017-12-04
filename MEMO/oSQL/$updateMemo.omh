@@ -1,0 +1,15 @@
+;  update record in the table
+
+Do $cinst.$createStatement()
+
+Begin statement
+Sta: {UPDATE Memo SET MemoTitle = @[pRow.MemoTitle], MemoDesc = @[pRow.MemoDesc] WHERE MemoID = @[pRow.MemoID]}
+
+Do $cinst.$executeSQLScript Returns lStatus
+
+If lStatus
+Else
+	Calculate pErrorMsg as con("Error updating record: ",chr(13),$cinst.$getLastError)
+End If
+
+Quit method lStatus

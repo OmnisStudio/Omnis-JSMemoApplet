@@ -1,0 +1,30 @@
+;  check the memo is not already open
+Do iOrderVarList.$search(iOrderVarList.uniqueID=iMemoList.[pNum].MemoID)
+Do iOrderVarList.$first(kTrue)
+
+If not(iOrderVarList.$line)
+	Calculate lLeft as iStackLeftPos+iStackInterval
+	Calculate lTop as iStackTopPos+iStackInterval
+	
+	Calculate lTitle as iMemoList.[pNum].MemoTitle
+	
+	Calculate lParams as con(kDq,iMemoList.[pNum].MemoDesc,kDq,lComma,iMemoList.[pNum].MemoID,lComma,pick(iNewMemo,0,1),lComma,kDq,lTitle,kDq)
+	Calculate lSFSID as iMemoList.[pNum].MemoID
+	
+	Calculate lClassName as "rJS_jsMemo"
+	
+	Do $cinst.$clientcommand("subformset_formadd",row(iSetName,lSFSID,lClassName,lParams,lTitle,lLeft,lTop,lWidth,lHeight,lModal))
+	
+	Calculate iStackLeftPos as lLeft
+	Calculate iStackTopPos as lTop
+	Do method resetStackPos     ;; check we are not going outside screen boundary
+	
+Else     ;; bring memo to front
+	Do $cinst.$clientcommand("subformset_formtofront",row(iSetName,iMemoList.[pNum].MemoID))
+End If
+
+Do iMemoList.[pNum].$assigncols(,,,,kTrue)
+
+Calculate iSFSOpen as kTrue
+Do $cinst.$objs.closeAllBtn.$enabled.$assign(kTrue)
+Quit method

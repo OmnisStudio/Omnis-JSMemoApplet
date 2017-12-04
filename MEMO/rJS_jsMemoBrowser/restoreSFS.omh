@@ -1,0 +1,22 @@
+Calculate lTotal as iOpenMemoList.$linecount
+For lNum from lTotal to 1 step -1
+	
+	Calculate lTitle as iOpenMemoList.[lNum].title
+	Calculate lParams as iOpenMemoList.[lNum].params
+	Calculate lSFSID as iOpenMemoList.[lNum].uniqueID
+	If iMobileDevice
+		Calculate lLeft as iOpenMemoList.[lNum].landleft
+		Calculate lTop as iOpenMemoList.[lNum].landtop
+		Calculate lWidth as iOpenMemoList.[lNum].landwidth
+		Calculate lHeight as iOpenMemoList.[lNum].landheight
+	Else
+		Calculate lLeft as iOpenMemoList.[lNum].left
+		Calculate lTop as iOpenMemoList.[lNum].top
+		Calculate lWidth as iOpenMemoList.[lNum].width
+		Calculate lHeight as iOpenMemoList.[lNum].height
+	End If
+	
+	Calculate lClassName as "rJS_jsMemo"
+	
+	Do $cinst.$clientcommand("subformset_formadd",row(iSetName,lSFSID,lClassName,lParams,lTitle,lLeft,lTop,lWidth,lHeight,lModal))
+End For

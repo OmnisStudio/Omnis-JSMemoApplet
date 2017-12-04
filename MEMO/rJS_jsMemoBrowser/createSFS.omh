@@ -1,0 +1,5 @@
+Do iSFSFormList.$define(iFLID,iFLClassName,iFLParams,iFLTitle,iFLLeft,iFLTop,iFLWidth,iFLHeight)
+Do iOrderVarList.$define(iFLID,iFLClassName,iFLParams,iFLTitle,iFLLeft,iFLTop,iFLWidth,iFLHeight)
+
+;  generate an empty sfs
+Do method showSFS

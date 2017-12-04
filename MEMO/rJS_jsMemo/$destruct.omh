@@ -1,0 +1,5 @@
+If iUnsaved
+	Do iSQLObjRef.$updateMemoDesc(iMemoID,iMemoText)
+End If
+
+Do $cwind.$removeSFS(iMemoID)

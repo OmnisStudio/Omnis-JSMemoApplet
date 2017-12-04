@@ -1,0 +1,12 @@
+Calculate lTotal as iMemoList.$linecount
+For lNum from 1 to lTotal step 1
+	Calculate iMemoList.[iMemoList.$line].iMemoOpen as kFalse
+End For
+
+Calculate lTotal as iOrderVarList.$linecount
+
+For lNum from lTotal to 1 step -1     ;; st/be/1003 - ensure the display list is in step with the z-order of the memos by looping in reverse
+	Do iMemoList.$search(iMemoList.MemoID=iOrderVarList.[lNum].uniqueID)
+	Do iMemoList.$first(kTrue)
+	Calculate iMemoList.[iMemoList.$line].iMemoOpen as kTrue
+End For

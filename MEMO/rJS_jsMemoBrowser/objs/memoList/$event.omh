@@ -1,0 +1,13 @@
+On evClick
+	
+On evDoubleClick
+	Do method addSFS (pVertCell)
+	Do iMemoList.$sendall($ref.$selected.$assign(kFalse))
+	;  Calculate iMemoList.[pVertCell].$selected as kTrue
+	Calculate iMemoList.$line as pVertCell
+	
+On evCellChanged
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

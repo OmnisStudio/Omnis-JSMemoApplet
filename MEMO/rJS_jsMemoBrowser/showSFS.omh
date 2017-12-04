@@ -1,0 +1,2 @@
+;  generate an empty sfs
+Do $cinst.$clientcommand("subformset_add",row(iSetName,'',kSFSflagCloseButton+kSFSflagMaxButton+kSFSflagMinButton+kSFSflagResize,"iOrderVarList",iSFSFormList))

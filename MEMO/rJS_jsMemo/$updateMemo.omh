@@ -1,0 +1,2 @@
+Do iSQLObjRef.$updateMemoDesc(iMemoID,iMemoText) Returns lStatus
+Quit method lStatus

@@ -1,0 +1,16 @@
+{
+	"ident": 1001,
+	"order": 1,
+	"properties": {
+		"cascade": "",
+		"checked": false,
+		"commandid": 1001,
+		"enabled": true,
+		"iconid": 0,
+		"text": {
+			"type": 0,
+			"calc": "Update Title"
+		},
+		"userinfo": ""
+	}
+}

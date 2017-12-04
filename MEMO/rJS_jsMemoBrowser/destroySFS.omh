@@ -1,0 +1,4 @@
+;  destroy the sfs
+Do $cinst.$clientcommand("subformset_remove",row(iSetName))
+Calculate iStackLeftPos as 0
+Calculate iStackTopPos as 50

@@ -1,0 +1,7 @@
+If iCurrBP=320
+	Calculate iScreenHeight as 480
+	Calculate iScreenWidth as 320
+Else
+	Calculate iScreenHeight as 800
+	Calculate iScreenWidth as 1175
+End If

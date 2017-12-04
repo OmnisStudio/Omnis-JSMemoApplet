@@ -1,0 +1,3 @@
+Do lRow.$define(lSetName,lUniqueID)
+Do lRow.$assigncols(pSetName,pID)
+Do $cinst.$clientcommand("subformset_formtofront",lRow)

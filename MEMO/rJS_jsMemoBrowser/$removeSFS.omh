@@ -1,0 +1,5 @@
+;  called by subwindow when memo is destroyed to ensure the memo browser is up-to-date
+Do iMemoList.$search($ref.MemoID=pID)
+Do iMemoList.$first(kTrue)
+Calculate iMemoList.[iMemoList.$line].C5 as kFalse
+Do iMemoList.$line.$assign(0)     ;; st/be/1003

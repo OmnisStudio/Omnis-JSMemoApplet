@@ -1,0 +1,9 @@
+On evBefore
+	
+On evAfter
+	Do iSQLObjRef.$updateMemoTitle(iMemoID,iMemoTitle) Returns lStatus
+	If lStatus
+		Do $cwind.$updateMemoTitle(iMemoID,iMemoTitle)
+		Do $cinst.$title.$assign(iMemoTitle)
+		Do $cinst.$objs.pagePane.$currentpage.$assign(2)
+	End If

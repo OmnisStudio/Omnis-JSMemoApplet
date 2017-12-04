@@ -1,0 +1,7 @@
+On evClick
+	Do method newMemoRecord
+	
+	Do iMemoList.$merge(iMemoRow,kTrue) Returns #F
+	Do iMemoList.$line.$assign(iMemoList.$linecount)
+	Do method addSFS (iMemoList.$linecount)
+	Calculate iNewMemo as kFalse
